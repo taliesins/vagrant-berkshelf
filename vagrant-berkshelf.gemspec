@@ -38,5 +38,5 @@ EOH
 
   spec.add_development_dependency 'spork', '~> 0.9'
   spec.add_development_dependency 'rspec', '~> 2.13'
-  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rake', '< 11.0'
 end
