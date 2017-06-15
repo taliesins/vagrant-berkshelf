@@ -1,29 +1,30 @@
-Vagrant Berkshelf Plugin
-========================
-[![Gem Version](http://img.shields.io/gem/v/vagrant-berkshelf.svg)][gem]
-[![Build Status](http://img.shields.io/travis/berkshelf/vagrant-berkshelf.svg)][travis]
+# Vagrant Berkshelf Plugin
 
-[gem]: https://rubygems.org/gems/vagrant-berkshelf
-[travis]: http://travis-ci.org/berkshelf/vagrant-berkshelf
+[![Gem Version](http://img.shields.io/gem/v/vagrant-berkshelf.svg)][gem] [![Build Status](http://img.shields.io/travis/berkshelf/vagrant-berkshelf.svg)][travis]
 
-Vagrant Berkshelf is a Vagrant plugin that adds Berkshelf integration to the
-Chef provisioners. Vagrant Berkshelf will automatically download and install
-cookbooks onto the Vagrant Virtual Machine.
+Vagrant Berkshelf is a Vagrant plugin that adds Berkshelf integration to the Chef provisioners. Vagrant Berkshelf will automatically download and install cookbooks onto the Vagrant Virtual Machine.
+
+## vagrant-berkshelf vs. Test Kitchen
+
+This plugin was created before the development of Test Kitchen and its usefulness in a post-Test Kitchen world is questionable. We believe Test Kitchen provides a robust and stable platform for testing cookbooks and we *highly* recommend using Test Kitchen instead of Vagrant for your cookbook testing workflows.
+
+See Seth Vargo's blog post for additional information:
+https://sethvargo.com/the-future-of-vagrant-berkshelf/
 
 
-Installation
-------------
-1. Install the latest version of [Vagrant](http://www.vagrantup.com/downloads.html)
+## Installation
+
+1. Install the latest version of [Vagrant](https://www.vagrantup.com/downloads.html)
 2. Install the latest version of [ChefDK](https://downloads.chef.io/chef-dk/)
 3. Install the Vagrant Berkshelf plugin:
 
-        $ vagrant plugin install vagrant-berkshelf
+  ```sh
+  $ vagrant plugin install vagrant-berkshelf
+  ```
 
+## Usage
 
-Usage
------
-If the Vagrant Berkshelf plugin is installed, it will intelligently detect when a
-Berksfile is present in the same working directory as the Vagrantfile.
+If the Vagrant Berkshelf plugin is installed, it will intelligently detect when a Berksfile is present in the same working directory as the Vagrantfile.
 
 Here is an example Vagrantfile configuration section for Vagrant Berkshelf:
 
@@ -51,9 +52,8 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+## Contributing
 
-Contributing
-------------
 Thank you to all of our [Contributors](https://github.com/berkshelf/vagrant-berkshelf/graphs/contributors), testers, and users.
 
 - Please report issues [on the GitHub issue tracker](https://github.com/berkshelf/berkshelf/issues)
@@ -61,9 +61,8 @@ Thank you to all of our [Contributors](https://github.com/berkshelf/vagrant-berk
 
 If you'd like to contribute, please see our [contribution guidelines](https://github.com/berkshelf/vagrant-berkshelf/blob/master/CONTRIBUTING.md) first.
 
+## License & Authors
 
-License & Authors
------------------
 - Jamie Winsor (jamie@vialstudios.com)
 - Michael Ivey (michael.ivey@riotgames.com)
 - Seth Vargo (sethvargo@gmail.com)
@@ -83,3 +82,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+[gem]: https://rubygems.org/gems/vagrant-berkshelf
+[travis]: https://travis-ci.org/berkshelf/vagrant-berkshelf
